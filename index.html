@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О чем нельзя шутить в России | Центр Ц.</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & UnifrakturMaguntia for gothic headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            gothic: ['UnifrakturMaguntia', 'serif'],
+          },
+          colors: {
+            brand: {
+              red: '#ff2a00',
+              glow: '#ff3b30',
+              bgBlack: '#060608',
+              cardBlack: '#121216',
+              borderGray: '#24242d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Настройка кастомного скроллбара */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #060608;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #24242d;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff2a00;
+    }
+
+    /* Мягкое фоновое неоновое свечение в стиле бренда */
+    .red-glow-ambient {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 42, 0, 0.12) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .red-glow-btn:hover {
+      box-shadow: 0 0 25px rgba(255, 42, 0, 0.5);
+    }
+
+    .gothic-glow {
+      text-shadow: 0 0 12px rgba(255, 42, 0, 0.4);
+    }
+    
+    /* Эффект сетки цифрового пространства на заднем фоне */
+    .grid-bg {
+      background-image: linear-gradient(to right, rgba(255, 42, 0, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 42, 0, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="bg-brand-bgBlack text-white font-sans antialiased overflow-x-hidden selection:bg-brand-red selection:text-white grid-bg">
+
+  <!-- Фоновое свечение в разных частях лонгрида -->
+  <div class="red-glow-ambient top-[-150px] left-[-150px]"></div>
+  <div class="red-glow-ambient top-[1500px] right-[-150px]"></div>
+  <div class="red-glow-ambient bottom-[600px] left-[15%]"></div>
+
+  <!-- Шапка сайта -->
+  <header class="sticky top-0 z-50 bg-brand-bgBlack/90 backdrop-blur-md border-b border-brand-borderGray px-4 lg:px-8 py-3.5">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Имитация фирменного готического логотипа Центр Ц. -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <span class="font-gothic text-3xl sm:text-4xl text-white tracking-wider lowercase transition-colors duration-300 group-hover:text-brand-red gothic-glow">
+          центр ц.
+        </span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-6 text-xs uppercase tracking-wider font-semibold text-gray-400">
+        <a href="#article" class="hover:text-white transition-colors">Запрещенные темы</a>
+        <a href="#calculator" class="hover:text-white transition-colors">Рискометр</a>
+        <a href="#quiz" class="hover:text-white transition-colors">Тест «Мем или Срок»</a>
+        <a href="#security" class="hover:text-white transition-colors">Безопасность</a>
+      </div>
+
+      <div>
+        <a href="#security" class="bg-brand-red text-white text-[11px] uppercase tracking-widest font-extrabold px-5 py-2.5 rounded border border-transparent hover:bg-transparent hover:border-brand-red transition-all duration-300 shadow-lg red-glow-btn">
+          Инструкция
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Дисклеймер и приветственный баннер -->
+  <section class="relative min-h-[90vh] flex items-center justify-center px-4 py-12 lg:py-20 overflow-hidden border-b border-brand-borderGray">
+    <!-- Фоновый радиальный блур -->
+    <div class="absolute inset-0 z-0 flex items-center justify-center">
+      <div class="w-[300px] sm:w-[650px] h-[300px] sm:h-[650px] rounded-full bg-brand-red opacity-[0.18] blur-[100px] sm:blur-[150px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Левая колонка: Описание -->
+      <div class="lg:col-span-7 text-left space-y-6">
+        <div class="inline-flex items-center space-x-2 bg-brand-red/10 border border-brand-red/30 px-3 py-1.5 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+          <span class="text-[10px] uppercase tracking-widest font-bold text-brand-red">Сводка данных</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-[1.05] text-white">
+          Опасный смех:<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-brand-red">
+            о чем нельзя шутить в современной России
+          </span>
+        </h1>
+
+        <!-- Мелкое, но юридически важное примечание об источнике материалов -->
+        <div class="bg-brand-cardBlack/60 border border-brand-borderGray p-3.5 rounded flex items-start space-x-3 max-w-2xl">
+          <span class="text-brand-red text-lg select-none">©</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            <strong class="text-gray-300">Источник:</strong> Данный информационный материал и интерактивные симуляторы подготовлены проектом «Центр Ц.» на основе аналитических данных и журналистского расследования издания <span class="text-brand-red font-semibold">«Важные Истории»</span>.
+          </p>
+        </div>
+
+        <p class="text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed font-light">
+          За безобидный лайк, репост картинки или стендап-монолог сегодня можно получить реальный уголовный срок. Мы перевели сухой язык судебных приговоров на понятный язык безопасности.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+          <a href="#article" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded hover:bg-brand-red hover:text-white transition-all duration-300 text-center text-sm uppercase tracking-wider">
+            Читать статью
+          </a>
+          <a href="#calculator" class="w-full sm:w-auto px-8 py-4 bg-brand-cardBlack border border-brand-borderGray hover:border-brand-red/50 text-white font-bold rounded transition-all duration-300 text-center text-sm uppercase tracking-wider">
+            Проверить шутку
+          </a>
+        </div>
+      </div>
+
+      <!-- Правая колонка: Кастомная векторная графика вместо внешней картинки -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <div class="relative group w-full max-w-[340px] sm:max-w-[400px]">
+          <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-red to-orange-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+          <div class="relative bg-brand-cardBlack border border-brand-borderGray p-6 rounded-lg shadow-2xl flex flex-col items-center">
+            
+            <!-- Интерактивная векторная мишень / Око Системы -->
+            <div class="relative w-48 h-48 flex items-center justify-center mb-6">
+              <div class="absolute inset-0 border border-brand-borderGray rounded-full animate-spin [animation-duration:12s]"></div>
+              <div class="absolute w-40 h-40 border-2 border-dashed border-brand-red/30 rounded-full animate-spin [animation-duration:8s] [animation-direction:reverse]"></div>
+              <div class="absolute w-28 h-28 border border-brand-red/50 rounded-full animate-pulse"></div>
+              
+              <!-- Иконка затвора / Камеры цензуры -->
+              <svg class="w-16 h-16 text-brand-red animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+
+            <div class="w-full space-y-3 font-mono text-center">
+              <p class="text-xs text-brand-red uppercase tracking-widest font-bold">СЛУЖБА ЦЕНЗУРЫ РУНЕТА</p>
+              <p class="text-[10px] text-gray-500 uppercase">Поиск экстремизма в реальном времени</p>
+              <div class="bg-black/80 rounded p-2 border border-brand-borderGray/50 text-[10px] text-left text-green-400 space-y-1">
+                <div>> Инициализация поиска...</div>
+                <div class="animate-pulse">> Системы Вепрь / Окулус активны</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Статистический банер -->
+  <section class="bg-black/60 border-b border-brand-borderGray py-12 px-4 lg:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 text-center">
+      <div class="px-6 py-4 border-r-0 md:border-r border-brand-borderGray last:border-0">
+        <p class="text-5xl font-black text-brand-red mb-2 tracking-tight">20.3.3 КоАП</p>
+        <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">«Дискредитация» армии</p>
+        <p class="text-[11px] text-gray-500 mt-1 max-w-xs mx-auto">Основная статья для быстрого наказания за антивоенный юмор и иронию.</p>
+      </div>
+      <div class="px-6 py-4 border-r-0 md:border-r border-brand-borderGray last:border-0">
+        <p class="text-5xl font-black text-white mb-2 tracking-tight">148 УК РФ</p>
+        <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">«Оскорбление чувств»</p>
+        <p class="text-[11px] text-gray-500 mt-1 max-w-xs mx-auto">До 3 лет заключения за публикацию мемов с религиозным подтекстом.</p>
+      </div>
+      <div class="px-6 py-4">
+        <p class="text-5xl font-black text-brand-red mb-2 tracking-tight">100%</p>
+        <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">Автоматизация поиска</p>
+        <p class="text-[11px] text-gray-500 mt-1 max-w-xs mx-auto">ИИ-системы ведут непрерывный анализ Рунета на выявление любого сарказма.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Главный текст статьи -->
+  <main id="article" class="max-w-4xl mx-auto px-4 py-16 lg:py-24 relative z-20">
+    
+    <!-- Вводные абзацы -->
+    <div class="space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed font-light mb-16">
+      <div class="border-l-4 border-brand-red pl-6 py-2 my-8 bg-brand-red/5 rounded-r">
+        <p class="text-lg sm:text-xl font-medium text-white italic">
+          «Смех — это мощнейшее оружие, но в сегодняшней России за его применение прилетает реальная уголовная "оборотка"».
+        </p>
+      </div>
+      <p>
+        Юмор в России перестал быть зоной психологической разгрузки и стал зоной повышенного юридического риска. То, что еще несколько лет назад считалось невинным сарказмом, сегодня ложится в основу обвинительных заключений. Силовики, вооруженные автоматизированными системами мониторинга соцсетей, больше не делают скидок на «иронию» и «постмодернизм».
+      </p>
+      <p>
+        Исследователи цифрового авторитаризма и юристы «Центра Ц.» сходятся во мнении: в стране сформировался негласный, но предельно жесткий перечень тем, шутки на которые гарантированно приведут к визиту сотрудников Центра «Э» или ФСБ.
+      </p>
+    </div>
+
+    <!-- Запретные темы -->
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-10 tracking-tight flex items-center">
+      <span class="font-gothic text-4xl text-brand-red mr-3">I.</span> Пять главных табу современного Рунета
+    </h2>
+
+    <div class="space-y-6 mb-20">
+      
+      <!-- Тема 1 -->
+      <div class="bg-brand-cardBlack border border-brand-borderGray hover:border-brand-red/30 transition-all duration-300 p-6 sm:p-8 rounded-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-sm">1</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Армия и военные действия</h3>
+          </div>
+          <span class="bg-brand-red/20 text-brand-red text-xs uppercase font-extrabold px-3 py-1 rounded tracking-wider self-start sm:self-auto">Экстремальный риск</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed font-light mb-4 text-sm sm:text-base">
+          Абсолютное табу номер один. Ирония над ходом военных действий, шутки про мобилизацию, саркастические комментарии под сводками Минобороны или мемы о генералах квалифицируются силовиками как <strong>«дискредитация использования Вооруженных Сил»</strong> (ст. 20.3.3 КоАП РФ) или, что значительно хуже, как <strong>«публичное распространение заведомо ложной информации»</strong> (ст. 207.3 УК РФ).
+        </p>
+        <div class="bg-black/40 border border-brand-borderGray/50 p-4 rounded text-xs text-gray-500">
+          <strong class="text-white">Реальный кейс:</strong> Блогер получил административный штраф в 45 000 рублей за шуточный твит о «тактическом перегруппировании сил», который суд посчитал «подрывом доверия к армии».
+        </div>
+      </div>
+
+      <!-- Тема 2 -->
+      <div class="bg-brand-cardBlack border border-brand-borderGray hover:border-brand-red/30 transition-all duration-300 p-6 sm:p-8 rounded-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-sm">2</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Религиозные символы и чувства верующих</h3>
+          </div>
+          <span class="bg-amber-500/10 text-amber-500 text-xs uppercase font-extrabold px-3 py-1 rounded tracking-wider self-start sm:self-auto border border-amber-500/20">Высокий риск</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed font-light mb-4 text-sm sm:text-base">
+          Статья 148 УК РФ защищает «чувства верующих» со всей суровостью. Под угрозой находится любой юмор, соприкасающийся с церковной атрибутикой, иконами, храмами или священнослужителями. Особенную опасность представляют полуобнаженные фото или комичные позы на фоне церквей (даже если они сделаны за километры от самого здания).
+        </p>
+        <div class="bg-black/40 border border-brand-borderGray/50 p-4 rounded text-xs text-gray-500">
+          <strong class="text-white">Реальный кейс:</strong> Уголовное дело за мем, где образ Иисуса Христа был сгенерирован нейросетью в образе рок-звезды. Обвинение усмотрело «издевательство над канонами веры».
+        </div>
+      </div>
+
+      <!-- Тема 3 -->
+      <div class="bg-brand-cardBlack border border-brand-borderGray hover:border-brand-red/30 transition-all duration-300 p-6 sm:p-8 rounded-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-sm">3</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Чиновники, Президент и Госсимволика</h3>
+          </div>
+          <span class="bg-amber-500/10 text-amber-500 text-xs uppercase font-extrabold px-3 py-1 rounded tracking-wider self-start sm:self-auto border border-amber-500/20">Высокий риск</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed font-light mb-4 text-sm sm:text-base">
+          Закон о <strong>«неуважении к власти»</strong> (ст. 20.1 КоАП РФ) позволяет штрафовать за любые нецензурные или чрезмерно едкие шутки в адрес ключевых лиц государства, флага, герба или гимна. Назвать чиновника глупым в анекдоте — прямая дорога к протоколу.
+        </p>
+        <div class="bg-black/40 border border-brand-borderGray/50 p-4 rounded text-xs text-gray-500">
+          <strong class="text-white">Реальный кейс:</strong> Штраф в размере 30 000 рублей за карикатуру, изображающую местного губернатора в виде персонажа из мультфильма с критической подписью о качестве дорог.
+        </div>
+      </div>
+
+      <!-- Тема 4 -->
+      <div class="bg-brand-cardBlack border border-brand-borderGray hover:border-brand-red/30 transition-all duration-300 p-6 sm:p-8 rounded-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-sm">4</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Гендерная идентичность и ЛГБТ+ тематика</h3>
+          </div>
+          <span class="bg-brand-red/20 text-brand-red text-xs uppercase font-extrabold px-3 py-1 rounded tracking-wider self-start sm:self-auto">Экстремальный риск</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed font-light mb-4 text-sm sm:text-base">
+          После признания «международного движения ЛГБТ» экстремистским на территории РФ, под запрет попал абсолютно весь юмор, затрагивающий нетрадиционные сексуальные отношения, квир-культуру или драг-эстетику. Шутка на эту тему в паблике или со сцены теперь трактуется не как глупость, а как <strong>«демонстрация символики экстремистской организации»</strong> или <strong>«пропаганда»</strong>.
+        </p>
+        <div class="bg-black/40 border border-brand-borderGray/50 p-4 rounded text-xs text-gray-500">
+          <strong class="text-white">Реальный кейс:</strong> Штраф за публикацию видеоролика со стендап-выступлением, где комик иронизировал над трудностями камин-аута. Видео признано пропагандой.
+        </div>
+      </div>
+
+      <!-- Тема 5 -->
+      <div class="bg-brand-cardBlack border border-brand-borderGray hover:border-brand-red/30 transition-all duration-300 p-6 sm:p-8 rounded-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-sm">5</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Историческая память и Великая Отечественная Война</h3>
+          </div>
+          <span class="bg-amber-500/10 text-amber-500 text-xs uppercase font-extrabold px-3 py-1 rounded tracking-wider self-start sm:self-auto border border-amber-500/20">Высокий риск</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed font-light mb-4 text-sm sm:text-base">
+          Статья о <strong>«реабилитации нацизма»</strong> (ст. 354.1 УК РФ) применяется ко всем, кто пытается шутить о событиях 1939–1945 годов, сравнивать советский режим с нацистским или иронизировать над мемориалами (например, Вечным огнем). Оскорбление ветеранов в шутливом контексте — это гарантированное уголовное преследование.
+        </p>
+        <div class="bg-black/40 border border-brand-borderGray/50 p-4 rounded text-xs text-gray-500">
+          <strong class="text-white">Реальный кейс:</strong> Уголовное дело против подростка, который выложил в соцсеть мем с подписью, высмеивающей пафос монументов воинской славы.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Раздел с ИИ Мониторингом (Интерактивный радар на чистом SVG) -->
+    <div class="relative bg-brand-cardBlack border border-brand-borderGray p-8 rounded-2xl mb-24 overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <h4 class="text-brand-red font-bold uppercase tracking-widest text-[11px] mb-3">Кто следит за вашим смехом?</h4>
+          <p class="text-xl font-bold leading-snug mb-4 text-white">
+            «Государство автоматизировало поиск сарказма. Системы ИИ сканируют Рунет быстрее, чем вы пишете комментарий».
+          </p>
+          <p class="text-sm text-gray-400 leading-relaxed font-light">
+            Автоматические системы анализа изображений («Окулус») и текстов («Вепрь») запрограммированы на триггерные слова. Нейросети не понимают иронии — они отправляют маркеры подозрительного контента дежурному оперативнику Центра «Э» для составления рапорта.
+          </p>
+        </div>
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-[280px] bg-black p-4 rounded-lg border border-brand-borderGray flex flex-col items-center">
+            
+            <!-- Цифровой радар поиска ИИ -->
+            <div class="relative w-full h-36 flex items-center justify-center overflow-hidden bg-brand-bgBlack rounded border border-brand-borderGray/50">
+              <svg class="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#ff2a00" stroke-width="0.5" />
+                <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#ff2a00" stroke-width="0.5" />
+                <circle cx="50%" cy="50%" r="20" fill="none" stroke="#ff2a00" stroke-width="0.5" />
+                <circle cx="50%" cy="50%" r="45" fill="none" stroke="#ff2a00" stroke-width="0.5" />
+              </svg>
+              <!-- Пульсирующая сигнатура нарушения -->
+              <div class="absolute top-1/3 left-1/4 w-3.5 h-3.5 bg-brand-red rounded-full animate-ping"></div>
+              <div class="absolute top-1/3 left-1/4 w-2 h-2 bg-brand-red rounded-full"></div>
+              
+              <div class="absolute bottom-2 right-2 text-[8px] font-mono text-brand-red animate-pulse">
+                CRITICAL HIT FOUND
+              </div>
+            </div>
+
+            <p class="text-[9px] text-gray-500 font-mono text-center mt-3 uppercase tracking-widest">Fig.1: Система распознавания «ВЕПРЬ»</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Блок интерактивных виджетов -->
+    <div class="relative py-12">
+      <!-- Glow effect background -->
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-red/5 via-transparent to-brand-red/5 rounded-3xl blur-md"></div>
+      
+      <!-- Интерактивный виджет 1: Рискометр -->
+      <div id="calculator" class="relative z-10 bg-black border border-brand-borderGray rounded-2xl p-6 sm:p-10 mb-16 shadow-2xl">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <div class="flex justify-center mb-3">
+            <span class="font-gothic text-3xl text-brand-red gothic-glow">ц</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold mt-2 mb-3">Цифровой Рискометр шуток</h3>
+          <p class="text-gray-400 text-xs sm:text-sm font-light">
+            Узнайте степень юридической безопасности вашей шутки или мема до того, как опубликовать ее на просторах Рунета.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Левый блок ввода параметров -->
+          <div class="space-y-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">1. Тематика шутки / публикации</label>
+              <select id="jokeTopic" class="w-full bg-brand-cardBlack border border-brand-borderGray rounded p-3 text-sm text-white focus:outline-none focus:border-brand-red transition-colors cursor-pointer">
+                <option value="domestic">Бытовой юмор (цены, ЖКХ, семейные зарисовки)</option>
+                <option value="military">Армия, СВО, мобилизация, военное руководство</option>
+                <option value="religion">Церковь, духовенство, иконы, святые образы</option>
+                <option value="officials">Президент, Государственная Дума, чиновники</option>
+                <option value="lgbt">Гендерные темы, ЛГБТ+, феминизм</option>
+                <option value="history">СССР, Сталин, Вторая мировая война, памятники</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">2. Где вы это публикуете?</label>
+              <select id="jokeFormat" class="w-full bg-brand-cardBlack border border-brand-borderGray rounded p-3 text-sm text-white focus:outline-none focus:border-brand-red transition-colors cursor-pointer">
+                <option value="private">Личное зашифрованное сообщение (Telegram/Signal)</option>
+                <option value="repost">Закрытый или приватный аккаунт (ВКонтакте/Одноклассники)</option>
+                <option value="public_page">Личная публичная страница (ВКонтакте/Instagram)</option>
+                <option value="standup">Выступление на сцене (стендап, импровизация)</option>
+                <option value="comment">Комментарий под постом крупного медиа или паблика</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">3. Формат подачи информации</label>
+              <div class="grid grid-cols-2 gap-4">
+                <button type="button" onclick="setVisual(false)" id="visualNo" class="bg-brand-red text-white py-2.5 rounded border border-brand-red font-bold text-xs uppercase tracking-wider transition-all">
+                  Только текст
+                </button>
+                <button type="button" onclick="setVisual(true)" id="visualYes" class="bg-brand-cardBlack hover:bg-brand-cardBlack/60 text-gray-400 py-2.5 rounded border border-brand-borderGray font-bold text-xs uppercase tracking-wider transition-all">
+                  Картинка / Мем
+                </button>
+              </div>
+            </div>
+
+            <button onclick="calculateRisk()" class="w-full py-4 bg-brand-red hover:bg-brand-red/90 text-white font-extrabold uppercase tracking-widest text-xs rounded transition-all shadow-lg red-glow-btn">
+              Рассчитать уровень угрозы
+            </button>
+          </div>
+
+          <!-- Правый блок: Отображение угрозы -->
+          <div id="riskResultCard" class="bg-brand-cardBlack border border-brand-borderGray rounded-xl p-6 flex flex-col justify-between relative overflow-hidden">
+            <!-- Световой индикатор -->
+            <div id="riskIndicatorBar" class="absolute left-0 top-0 bottom-0 w-2 bg-green-500 transition-all duration-500"></div>
+            
+            <div class="pl-4">
+              <span class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Оценка юридического риска</span>
+              
+              <div class="mt-4">
+                <h4 id="riskLevelName" class="text-2xl sm:text-3xl font-black tracking-tight text-green-500 transition-colors duration-500">БЕЗОПАСНО</h4>
+                <div class="w-full bg-brand-bgBlack h-1.5 rounded-full mt-2 overflow-hidden">
+                  <div id="riskProgress" class="bg-green-500 h-full w-[15%] transition-all duration-500"></div>
+                </div>
+              </div>
+
+              <div class="mt-6 space-y-4">
+                <div>
+                  <span class="text-[10px] text-gray-500 uppercase block">Вероятная квалификация</span>
+                  <p id="riskStatute" class="text-white text-sm font-semibold mt-1">Отсутствует.</p>
+                </div>
+                <div>
+                  <span class="text-[10px] text-gray-500 uppercase block">Юридические последствия</span>
+                  <p id="riskPenalty" class="text-gray-400 text-xs sm:text-sm mt-1">Минимальный риск преследования.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pl-4 mt-6 border-t border-brand-borderGray/50 pt-4">
+              <div class="flex items-center space-x-2 text-[10px] text-amber-500" id="riskWarningText">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <span>Данные рассчитаны на основе прецедентов судебных решений РФ за 2024–2026 годы.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Интерактивный виджет 2: Квиз -->
+      <div id="quiz" class="relative z-10 bg-brand-cardBlack border border-brand-borderGray rounded-2xl p-6 sm:p-10 mb-16 shadow-2xl overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-xl mb-8">
+          <span class="text-[10px] uppercase tracking-widest bg-brand-red/10 border border-brand-red/30 px-3 py-1 rounded-full font-bold text-brand-red">Симулятор реальности</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold mt-4 mb-2">Тест: «Мем или реальный срок»</h3>
+          <p class="text-gray-400 text-xs sm:text-sm font-light">
+            Угадайте реальные исходы судебных процессов за шутки и карикатуры в интернете. Грани свободы слова тоньше, чем кажется.
+          </p>
+        </div>
+
+        <!-- Контейнер вопросов -->
+        <div id="quizBox">
+          <!-- Хедер текущего вопроса -->
+          <div class="flex items-center justify-between border-b border-brand-borderGray/50 pb-4 mb-6">
+            <span class="text-xs font-semibold text-gray-400" id="quizCounter">Вопрос 1 из 4</span>
+            <span class="text-[10px] text-brand-red font-bold uppercase tracking-widest" id="quizCategory">Чувства верующих</span>
+          </div>
+
+          <!-- Текст вопроса -->
+          <div class="mb-8">
+            <h4 class="text-base sm:text-lg font-bold mb-3 text-white" id="quizQuestion">
+              Блогер выложил селфи на фоне Собора Василия Блаженного. Каков исход суда?
+            </h4>
+            <p class="text-xs sm:text-sm text-gray-400 italic font-light" id="quizContext">
+              Фото сопровождалось ироничным описанием.
+            </p>
+          </div>
+
+          <!-- Опции ответа -->
+          <div class="space-y-3.5" id="quizAnswers">
+            <!-- Заполняется динамически скриптом -->
+          </div>
+
+          <!-- Результат ответа (Скрыт изначально) -->
+          <div id="quizExplanation" class="mt-6 p-5 rounded-lg border hidden transition-all duration-300">
+            <h5 class="font-bold text-sm mb-1" id="explanationTitle">Решение суда</h5>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light" id="explanationText">Подробности прецедента.</p>
+            <button onclick="nextQuestion()" class="mt-4 px-5 py-2 bg-brand-red hover:bg-brand-red/90 text-white font-bold text-[10px] uppercase tracking-widest rounded transition-all">
+              Продолжить
+            </button>
+          </div>
+        </div>
+
+        <!-- Конец Квиза -->
+        <div id="quizFinished" class="hidden text-center py-8">
+          <span class="text-5xl">⚖️</span>
+          <h4 class="text-2xl font-black mt-4 mb-2">Тест завершен</h4>
+          <p class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto mb-6 leading-relaxed font-light" id="quizScoreText">
+            Вы успешно справились с анализом судебной практики!
+          </p>
+          <button onclick="restartQuiz()" class="px-5 py-3 bg-brand-red hover:bg-brand-red/90 text-white font-bold text-[10px] uppercase tracking-widest rounded transition-all shadow-md">
+            Пройти тест заново
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Инструкция по цифровой выживаемости -->
+    <h2 id="security" class="text-3xl sm:text-4xl font-extrabold text-white mb-10 tracking-tight flex items-center">
+      <span class="font-gothic text-4xl text-brand-red mr-3">II.</span> Инструкция по цифровой выживаемости
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+      <div class="lg:col-span-7 space-y-4">
+        <p class="text-gray-400 leading-relaxed font-light text-sm sm:text-base">
+          Аналитики «Центра Ц.» подготовили краткое руководство по снижению цифровых рисков на территории РФ. Эти простые действия помогут защитить ваш цифровой след от обнаружения автоматизированными ИИ-цензорами.
+        </p>
+
+        <!-- Раскладушки безопасности -->
+        <div class="space-y-3">
+          <!-- Карточка 1 -->
+          <div class="border border-brand-borderGray rounded bg-brand-cardBlack">
+            <button onclick="toggleAccordion('acc1')" class="w-full text-left p-5 flex justify-between items-center hover:bg-brand-borderGray/20 transition-colors">
+              <span class="text-sm font-bold text-white">1. Ревизия старых постов и лайков</span>
+              <span id="acc1-icon" class="text-gray-500 text-lg transition-transform duration-300">+</span>
+            </button>
+            <div id="acc1" class="hidden p-5 border-t border-brand-borderGray bg-black/30 text-xs sm:text-sm text-gray-300 space-y-2 leading-relaxed font-light">
+              <p>
+                Закон о «дискредитации» имеет <strong>длящийся характер</strong>. Пост, сделанный вами в 2017 году, может быть расценен как правонарушение, длящееся прямо сейчас.
+              </p>
+              <ul class="list-disc pl-5 text-gray-400 space-y-1">
+                <li>Очистите историю записей во всех соцсетях (особенно российских).</li>
+                <li>Закройте свой профиль ВКонтакте от посторонних глаз.</li>
+                <li>Используйте автоматические утилиты для очистки старых реакций.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="border border-brand-borderGray rounded bg-brand-cardBlack">
+            <button onclick="toggleAccordion('acc2')" class="w-full text-left p-5 flex justify-between items-center hover:bg-brand-borderGray/20 transition-colors">
+              <span class="text-sm font-bold text-white">2. Шифрование сетевого трафика</span>
+              <span id="acc2-icon" class="text-gray-500 text-lg transition-transform duration-300">+</span>
+            </button>
+            <div id="acc2" class="hidden p-5 border-t border-brand-borderGray bg-black/30 text-xs sm:text-sm text-gray-300 space-y-2 leading-relaxed font-light">
+              <p>
+                Всегда шифруйте сетевое соединение. Местные интернет-провайдеры собирают лог-файлы ваших визитов и обязаны выдавать информацию силовым ведомствам по закону Яровой.
+              </p>
+              <ul class="list-disc pl-5 text-gray-400 space-y-1">
+                <li>Держите VPN постоянно включенным, выбирайте надежные протоколы (VLESS, Shadowsocks).</li>
+                <li>Настройте 2FA через приложения (не через СМС).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="border border-brand-borderGray rounded bg-brand-cardBlack">
+            <button onclick="toggleAccordion('acc3')" class="w-full text-left p-5 flex justify-between items-center hover:bg-brand-borderGray/20 transition-colors">
+              <span class="text-sm font-bold text-white">3. Принцип разделения цифровой личности</span>
+              <span id="acc3-icon" class="text-gray-500 text-lg transition-transform duration-300">+</span>
+            </button>
+            <div id="acc3" class="hidden p-5 border-t border-brand-borderGray bg-black/30 text-xs sm:text-sm text-gray-300 space-y-2 leading-relaxed font-light">
+              <p>
+                Никогда не привязывайте сим-карты, оформленные по вашему паспорту в РФ, к анонимным Telegram-каналам или аккаунтам в Twitter/X.
+              </p>
+              <ul class="list-disc pl-5 text-gray-400 space-y-1">
+                <li>Используйте виртуальные e-SIM карты, оформленные на зарубежные данные.</li>
+                <li>Не выставляйте узнаваемые личные фотографии в профилях саркастической направленности.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая колонка: Кастомный интерактивный интерактивный макет смартфона -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="relative w-full max-w-[270px] bg-brand-cardBlack p-5 rounded-[32px] border-4 border-brand-borderGray shadow-2xl">
+          <!-- Notch -->
+          <div class="absolute top-2.5 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-black rounded-full z-30"></div>
+          
+          <div class="text-center pb-2 mb-4 border-b border-brand-borderGray">
+            <span class="text-[9px] uppercase tracking-widest text-brand-red font-bold">Настройки смартфона</span>
+          </div>
+          
+          <!-- Mockup screen -->
+          <div class="bg-black/95 rounded-xl p-3.5 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-white font-medium">Скрытый номер</p>
+                <p class="text-[9px] text-gray-500">В Telegram/Signal</p>
+              </div>
+              <div class="w-8 h-4 bg-brand-red rounded-full flex items-center justify-end p-0.5 cursor-pointer">
+                <div class="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-white font-medium">VPN Прокси</p>
+                <p class="text-[9px] text-gray-500">Постоянная защита</p>
+              </div>
+              <div class="w-8 h-4 bg-brand-red rounded-full flex items-center justify-end p-0.5 cursor-pointer">
+                <div class="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-white font-medium">Автоудаление чатов</p>
+                <p class="text-[9px] text-gray-500">Через 24 часа</p>
+              </div>
+              <div id="mockToggle" onclick="toggleMockSetting()" class="w-8 h-4 bg-gray-700 rounded-full flex items-center p-0.5 cursor-pointer transition-colors duration-300">
+                <div id="mockToggleCircle" class="w-3 h-3 bg-white rounded-full transition-transform duration-300 transform translate-x-0"></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[9px] text-center text-gray-500 font-mono mt-4 uppercase">Fig.2: Mobile Security Panel</p>
+        </div>
+        <p class="text-[10px] text-gray-500 font-mono text-center mt-3 uppercase tracking-widest">Цифровой щит Центра Ц.</p>
+      </div>
+    </div>
+
+    <!-- Финальный блок -->
+    <div class="relative text-center border border-brand-borderGray p-10 rounded-2xl overflow-hidden bg-brand-cardBlack">
+      <h3 class="text-2xl font-black mb-3">Безопасность вашего смеха — в ваших руках</h3>
+      <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto mb-8 leading-relaxed font-light">
+        «Центр Ц.» осуществляет мониторинг давления на свободный юмор, публикует обзоры угроз безопасности и помогает пользователям защитить свои цифровые права. Будьте осторожны.
+      </p>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Футер -->
+  <footer class="bg-black border-t border-brand-borderGray py-12 px-4 lg:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col items-center md:items-start">
+        <span class="font-gothic text-3xl text-white tracking-wider lowercase mb-2 gothic-glow">Центр ц.</span>
+        <p class="text-[11px] text-gray-500 text-center md:text-left">Анализ цензуры, защита цифровых прав. © Chentr Che Rossia 2026</p>
+      </div>
+      
+      <div class="flex items-center space-x-6 text-[11px] text-gray-500 uppercase tracking-widest font-semibold">
+        <a href="#" class="hover:text-brand-red transition-colors">Безопасность</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Кастомные оповещения -->
+  <div id="customAlert" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 max-w-sm w-full bg-brand-cardBlack border border-brand-red p-4 rounded-lg shadow-2xl flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <span class="text-brand-red font-gothic text-2xl gothic-glow">ц</span>
+      <p class="text-xs sm:text-sm text-white font-medium" id="customAlertText">Уведомление</p>
+    </div>
+    <button onclick="closeCustomAlert()" class="text-gray-500 hover:text-white transition-colors ml-4 font-bold text-lg">×</button>
+  </div>
+
+  <!-- JS Интерактивность -->
+  <script>
+    let currentVisual = false;
+
+    // Свитч настроек телефона на мокапе
+    let mockActive = false;
+    function toggleMockSetting() {
+      const toggle = document.getElementById('mockToggle');
+      const circle = document.getElementById('mockToggleCircle');
+      mockActive = !mockActive;
+      if (mockActive) {
+        toggle.className = "w-8 h-4 bg-brand-red rounded-full flex items-center justify-end p-0.5 cursor-pointer transition-colors duration-300";
+        circle.className = "w-3 h-3 bg-white rounded-full transition-transform duration-300 transform translate-x-0";
+        alertCustom("Функция автоудаления сообщений включена в симуляторе!");
+      } else {
+        toggle.className = "w-8 h-4 bg-gray-700 rounded-full flex items-center p-0.5 cursor-pointer transition-colors duration-300";
+        circle.className = "w-3 h-3 bg-white rounded-full transition-transform duration-300 transform translate-x-0";
+      }
+    }
+
+    // БАЗА ДАННЫХ РИСКОМЕТРА
+    const topicsMap = {
+      domestic: {
+        title: "Шутки на бытовые темы",
+        baseRisk: 10,
+        statutes: {
+          private: { text: "Состав отсутствует.", penalty: "Практически нулевой уровень опасности в РФ на данный момент." },
+          repost: { text: "Безопасно.", penalty: "Риска преследования нет. Главное — избегать личной клеветы на конкретных людей." },
+          public_page: { text: "Низкий уровень риска.", penalty: "Органы цензуры практически не обращают внимания на шутки о ценах и ЖКХ." },
+          standup: { text: "Безопасно.", penalty: "Нормальные темы для любых региональных стендап-площадок." },
+          comment: { text: "Низкий уровень риска.", penalty: "Возможен флуд со стороны ботов, но закон здесь бессилен." }
+        }
+      },
+      military: {
+        title: "Юмор про армию / СВО",
+        baseRisk: 90,
+        statutes: {
+          private: { text: "УК РФ Статья 207.3 / 280.3.", penalty: "Перехват сообщений может спровоцировать преследование. Высокий риск." },
+          repost: { text: "КоАП 20.3.3 (Дискредитация) / УК 207.3.", penalty: "Штраф до 50 000 руб., при повторной публикации — реальный срок от 5 до 15 лет." },
+          public_page: { text: "УК РФ Статья 207.3 (Военные фейки).", penalty: "Экстремально высокая вероятность получения реального тюремного срока." },
+          standup: { text: "УК РФ Статья 280.3 / КоАП 20.3.3.", penalty: "Запись выступления на видео приведет к мгновенному возбуждению дела." },
+          comment: { text: "УК РФ Статья 207.3 (Часть 2 — группой лиц).", penalty: "Тяжкий уголовный состав. Предусматривает до 10 лет лишения свободы." }
+        }
+      },
+      religion: {
+        title: "Шутки о религии",
+        baseRisk: 65,
+        statutes: {
+          private: { text: "УК РФ Статья 148 (Чувства верующих).", penalty: "Риск минимальный, если ваш собеседник не решит подать донос." },
+          repost: { text: "УК РФ Статья 148.", penalty: "Штрафы до 300 000 руб. или принудительные работы до 1 года." },
+          public_page: { text: "УК РФ Статья 148.", penalty: "Реальные сроки до 3 лет, особенно за контент на фоне культовых сооружений." },
+          standup: { text: "УК РФ Статья 148.", penalty: "Выступление может спровоцировать жалобу активистов прямо из зала." },
+          comment: { text: "УК РФ Статья 148.", penalty: "Большинство дел за мемы начинаются с доносов по сетевым комментариям." }
+        }
+      },
+      officials: {
+        title: "Ирония в адрес Власти",
+        baseRisk: 75,
+        statutes: {
+          private: { text: "КоАП РФ Статья 20.1.", penalty: "Маловероятно в чатах с шифрованием, если переписка не утекла." },
+          repost: { text: "КоАП РФ Статья 20.1 (Неуважение к власти).", penalty: "Административный штраф от 30 000 до 100 000 рублей." },
+          public_page: { text: "КоАП РФ Статья 20.1.", penalty: "При повторном нарушении — арест до 15 суток или штраф до 300 000 рублей." },
+          standup: { text: "КоАП РФ Статья 20.1.", penalty: "Может повлечь срыв концерта и визит правоохранителей." },
+          comment: { text: "КоАП РФ Статья 20.1.", penalty: "Штраф за проявление явного неуважения к государственным институтам." }
+        }
+      },
+      lgbt: {
+        title: "Квир и гендерные шутки",
+        baseRisk: 85,
+        statutes: {
+          private: { text: "КоАП РФ Статья 6.21 (ЛГБТ-пропаганда).", penalty: "В закрытых беседах риски отсутствуют до момента доноса." },
+          repost: { text: "КоАП 6.21 / УК 282.2 (Участие в экстремистской организации).", penalty: "Уголовное преследование за пропаганду запрещенных движений." },
+          public_page: { text: "УК РФ Статья 282.2.", penalty: "До 6 лет лишения свободы. Весь юмор по теме ЛГБТ приравнен к экстремизму." },
+          standup: { text: "КоАП РФ Статья 6.21.", penalty: "Штрафы для организаторов и артистов, отмена гастрольных туров." },
+          comment: { text: "КоАП РФ Статья 6.21.", penalty: "Высокий риск получения штрафа до 100 000 рублей." }
+        }
+      },
+      history: {
+        title: "Исторический юмор / Нацизм",
+        baseRisk: 70,
+        statutes: {
+          private: { text: "УК РФ Статья 354.1 (Реабилитация нацизма).", penalty: "Минимальный риск, если нет утечек вашей переписки." },
+          repost: { text: "УК 354.1 / КоАП 20.3 (Нацистская символика).", penalty: "Штрафы от 1 000 до 2 000 руб., при повторении — реальный срок до 5 лет." },
+          public_page: { text: "УК РФ Статья 354.1.", penalty: "Обвинение в оскорблении памяти ветеранов или символов ВОВ. До 5 лет колонии." },
+          standup: { text: "УК РФ Статья 354.1.", penalty: "Высокая опасность при неосторожном сравнении событий истории." },
+          comment: { text: "УК РФ Статья 354.1 / КоАП 20.3.", penalty: "Автоматический поиск ИИ картинок со свастикой мгновенно регистрирует кейс." }
+        }
+      }
+    };
+
+    function setVisual(hasVisual) {
+      currentVisual = hasVisual;
+      const yesBtn = document.getElementById('visualYes');
+      const noBtn = document.getElementById('visualNo');
+      
+      if (hasVisual) {
+        yesBtn.className = "bg-brand-red text-white py-2.5 rounded border border-brand-red font-bold text-xs uppercase tracking-wider transition-all";
+        noBtn.className = "bg-brand-cardBlack hover:bg-brand-cardBlack/60 text-gray-400 py-2.5 rounded border border-brand-borderGray font-bold text-xs uppercase tracking-wider transition-all";
+      } else {
+        noBtn.className = "bg-brand-red text-white py-2.5 rounded border border-brand-red font-bold text-xs uppercase tracking-wider transition-all";
+        yesBtn.className = "bg-brand-cardBlack hover:bg-brand-cardBlack/60 text-gray-400 py-2.5 rounded border border-brand-borderGray font-bold text-xs uppercase tracking-wider transition-all";
+      }
+    }
+
+    function calculateRisk() {
+      const topicKey = document.getElementById('jokeTopic').value;
+      const formatKey = document.getElementById('jokeFormat').value;
+      
+      const config = topicsMap[topicKey];
+      let finalRisk = config.baseRisk;
+
+      if (formatKey === 'private') finalRisk -= 30;
+      if (formatKey === 'repost') finalRisk += 5;
+      if (formatKey === 'public_page') finalRisk += 10;
+      if (formatKey === 'comment') finalRisk += 15;
+      if (formatKey === 'standup') finalRisk += 10;
+
+      if (currentVisual) finalRisk += 15;
+
+      finalRisk = Math.max(5, Math.min(100, finalRisk));
+
+      const levelName = document.getElementById('riskLevelName');
+      const progressBar = document.getElementById('riskProgress');
+      const indicatorBar = document.getElementById('riskIndicatorBar');
+      const statuteText = document.getElementById('riskStatute');
+      const penaltyText = document.getElementById('riskPenalty');
+
+      const resultData = config.statutes[formatKey];
+      statuteText.innerText = resultData.text;
+      penaltyText.innerText = resultData.penalty;
+
+      let colorClass = 'text-green-500';
+      let bgClass = 'bg-green-500';
+      let label = 'БЕЗОПАСНО';
+
+      if (finalRisk > 25 && finalRisk <= 55) {
+        colorClass = 'text-yellow-500';
+        bgClass = 'bg-yellow-500';
+        label = 'УМЕРЕННЫЙ РИСК';
+      } else if (finalRisk > 55 && finalRisk <= 80) {
+        colorClass = 'text-orange-500';
+        bgClass = 'bg-orange-500';
+        label = 'ВЫСОКИЙ РИСК';
+      } else if (finalRisk > 80) {
+        colorClass = 'text-brand-red';
+        bgClass = 'bg-brand-red';
+        label = 'КРИТИЧЕСКАЯ УГРОЗА';
+      }
+
+      levelName.className = `text-2xl sm:text-3xl font-black tracking-tight ${colorClass} transition-colors duration-500`;
+      levelName.innerText = label;
+
+      progressBar.className = `h-full ${bgClass} transition-all duration-500`;
+      progressBar.style.width = `${finalRisk}%`;
+
+      indicatorBar.className = `absolute left-0 top-0 bottom-0 w-2 ${bgClass} transition-all duration-500`;
+
+      if (finalRisk > 80) {
+        alertCustom("Внимание: Публикация на эту тему имеет критический уровень правовой опасности!");
+      }
+    }
+
+
+    // СИМУЛЯТОР СУДЕБНОЙ РЕАЛЬНОСТИ (КВИЗ)
+    const quizQuestions = [
+      {
+        question: "Блогер выложил селфи с сигаретой на фоне собора Василия Блаженного. Каков вердикт суда?",
+        context: "Судебная практика по статье об оскорблении чувств верующих.",
+        answers: [
+          "Суд прекратил дело за примирением сторон.",
+          "Приговор: 10 месяцев реального лишения свободы в колонии.",
+          "Суд назначил штраф в размере 25 000 рублей."
+        ],
+        correct: 1,
+        explanation: "Реальный приговор: Блогер Руслан Бобиев и его подруга получили по 10 месяцев реальной колонии. Это первый случай лишения свободы по ст. 148 УК РФ в России."
+      },
+      {
+        question: "Комментарий: «Доблестные войска умеют наступать только назад» под постом. Что произошло?",
+        context: "Опубликовано в открытом паблике.",
+        answers: [
+          "Пользователь получил блокировку страницы.",
+          "Штраф 30 000 рублей по статье 20.3.3 КоАП за дискредитацию.",
+          "Уголовный срок до 2 лет условно."
+        ],
+        correct: 1,
+        explanation: "Реальный исход: Вынесен штраф в размере 30 000 рублей. Повторные нарушения этой статьи в течение года ведут к уголовной ответственности."
+      },
+      {
+        question: "Комик сравнил традиционные ценности со средневековым крепостным правом. Последствия?",
+        context: "Видео попало на YouTube.",
+        answers: [
+          "Блокировка видеохостинга.",
+          "Проверка на экстремизм, отмена гастролей и штраф.",
+          "Никаких последствий."
+        ],
+        correct: 1,
+        explanation: "Реальный исход: Проверка Центра «Э», превентивная отмена всех клубных выступлений из-за угрозы безопасности бизнеса."
+      },
+      {
+        question: "Подросток опубликовал мем с Вечным огнем, где была пририсована сосиска. Каков исход?",
+        context: "Мем опубликован в закрытой группе одноклассников.",
+        answers: [
+          "Воспитательная беседа.",
+          "Уголовное дело по статье 354.1 УК РФ (Реабилитация нацизма), домашний арест.",
+          "Штраф родителям на сумму 5 000 рублей."
+        ],
+        correct: 1,
+        explanation: "Реальный исход: Возбуждено полноценное уголовное дело по статье об осквернении символов воинской славы. Органы жестко пресекают любые манипуляции с памятниками."
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function loadQuestion() {
+      const q = quizQuestions[currentQuestionIndex];
+      document.getElementById('quizCounter').innerText = `Вопрос ${currentQuestionIndex + 1} из ${quizQuestions.length}`;
+      document.getElementById('quizQuestion').innerText = q.question;
+      document.getElementById('quizContext').innerText = q.context;
+      
+      const answersContainer = document.getElementById('quizAnswers');
+      answersContainer.innerHTML = '';
+      
+      q.answers.forEach((ans, idx) => {
+        const btn = document.createElement('button');
+        btn.onclick = () => selectAnswer(idx);
+        btn.className = "w-full text-left p-4 rounded bg-brand-bgBlack border border-brand-borderGray hover:border-brand-red/50 transition-all text-sm sm:text-base";
+        btn.innerText = ans;
+        answersContainer.appendChild(btn);
+      });
+
+      document.getElementById('quizExplanation').classList.add('hidden');
+    }
+
+    function selectAnswer(index) {
+      const q = quizQuestions[currentQuestionIndex];
+      const explanationBox = document.getElementById('quizExplanation');
+      const title = document.getElementById('explanationTitle');
+      const text = document.getElementById('explanationText');
+      
+      const buttons = document.getElementById('quizAnswers').querySelectorAll('button');
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === q.correct) {
+          btn.className = "w-full text-left p-4 rounded bg-green-950/40 border border-green-500 text-xs sm:text-sm";
+        } else if (idx === index) {
+          btn.className = "w-full text-left p-4 rounded bg-red-950/40 border border-brand-red text-xs sm:text-sm";
+        }
+      });
+
+      if (index === q.correct) {
+        score++;
+        title.innerText = "Правильно!";
+        title.className = "font-bold text-sm mb-1 text-green-500";
+        explanationBox.className = "mt-6 p-4 rounded-lg border border-green-500/30 bg-green-950/10 block transition-all duration-300";
+      } else {
+        title.innerText = "Неверно.";
+        title.className = "font-bold text-sm mb-1 text-brand-red";
+        explanationBox.className = "mt-6 p-4 rounded-lg border border-brand-red/30 bg-brand-red/5 block transition-all duration-300";
+      }
+
+      text.innerText = q.explanation;
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < quizQuestions.length) {
+        loadQuestion();
+      } else {
+        document.getElementById('quizBox').classList.add('hidden');
+        const finishedBox = document.getElementById('quizFinished');
+        finishedBox.classList.remove('hidden');
+        
+        const scoreText = document.getElementById('quizScoreText');
+        scoreText.innerText = `Вы верно спрогнозировали ${score} из ${quizQuestions.length} исходов. Внимательно следите за тем, что пишите в сети!`;
+      }
+    }
+
+    function restartQuiz() {
+      currentQuestionIndex = 0;
+      score = 0;
+      document.getElementById('quizBox').classList.remove('hidden');
+      document.getElementById('quizFinished').classList.add('hidden');
+      loadQuestion();
+    }
+
+
+    // АККОРДЕОНЫ СОВЕТОВ ПО БЕЗОПАСНОСТИ
+    function toggleAccordion(id) {
+      const acc = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      
+      if (acc.classList.contains('hidden')) {
+        acc.classList.remove('hidden');
+        icon.innerText = '−';
+        icon.classList.add('text-brand-red');
+      } else {
+        acc.classList.add('hidden');
+        icon.innerText = '+';
+        icon.classList.remove('text-brand-red');
+      }
+    }
+
+
+    // КАСТОМНЫЕ ПРЕДУПРЕЖДЕНИЯ (БЕЗ ALERT)
+    function alertCustom(message) {
+      const alertBox = document.getElementById('customAlert');
+      const alertText = document.getElementById('customAlertText');
+      alertText.innerText = message;
+      
+      alertBox.classList.remove('translate-y-20', 'opacity-0');
+      alertBox.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        closeCustomAlert();
+      }, 4000);
+    }
+
+    function closeCustomAlert() {
+      const alertBox = document.getElementById('customAlert');
+      alertBox.classList.add('translate-y-20', 'opacity-0');
+      alertBox.classList.remove('translate-y-0', 'opacity-100');
+    }
+
+    function copyToClipboard() {
+      const url = window.location.href;
+      const tempInput = document.createElement('input');
+      tempInput.value = url;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      
+      alertCustom("Ссылка скопирована в буфер обмена!");
+    }
+
+
+    // Запуск инициализации при загрузке страницы
+    window.onload = function() {
+      calculateRisk();
+      loadQuestion();
+    };
+  </script>
+</body>
+</html>
